@@ -1,0 +1,74 @@
+import React from "react";
+import { FaApple, FaEyeSlash, FaFacebookF } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+
+export default function Login() {
+  return (
+    <div className="h-screen py-10 px-5 max-w-md mx-auto">
+      <div className="mb-10">
+        <h1 className="text-white text-3xl text-center mb-2.5 font-bold ">
+          Sign In
+        </h1>
+        <p className="text-white text-center text-lg">
+          Welcome back! Please enter your details.
+        </p>
+      </div>
+      <form action="" className="mb-10">
+        <div className="mb-6">
+          <div>
+            <label htmlFor="email" className="text-white mb-1.5 block">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5"
+            />
+          </div>
+          <div className="mb-5">
+            <label htmlFor="password" className="text-white mb-1.5 block">
+              Password
+            </label>
+            <div className="relative">
+              <input
+                type="password"
+                id="password"
+                className="bg-[#9E9D9D] p-2 rounded w-full outline-none"
+              />
+              <FaEyeSlash className="absolute top-1/2 -translate-y-1/2 right-3 z-10 text-[#000000]" />
+            </div>
+          </div>
+          <div className="flex items-center mt-4 justify-end">
+            <a href="#" className="text-white">
+              Forgot password?
+            </a>
+          </div>
+        </div>
+        <button className="bg-[#E48045] text-white py-2 px-4 rounded-2xl w-full  hover:bg-[#E64A19] mb-10">
+          Sign In
+        </button>
+      </form>
+      <div className="relative mb-15 ">
+        <span className="w-full h-px bg-[#626262] block"></span>
+        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#212121] px-3 text-[#626262] block">
+          or with
+        </span>
+      </div>
+      <div className=" flex justify-center gap-9">
+        <div className="border w-10 h-10 border-white rounded-full flex justify-center items-center">
+          <FaApple size={20} />
+        </div>
+        <div className="border w-10 h-10 border-white rounded-full flex justify-center items-center">
+          <FcGoogle size={20} />
+        </div>
+        <div className="border w-10 h-10 border-white rounded-full flex justify-center items-center">
+          <FaFacebookF size={20} color="#1877F2" />
+        </div>
+      </div>
+      <p className="text-white text-center mt-5">
+        Don't have an account?{" "}
+        <u className="cursor-pointer text-[#E48045]">Sign Up</u>
+      </p>
+    </div>
+  );
+}
