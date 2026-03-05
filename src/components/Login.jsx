@@ -23,7 +23,7 @@ export default function Login() {
             <input
               type="email"
               id="email"
-              className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5 "
+              className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5 text-white"
             />
           </div>
           <div className="mb-5 animate-slidein">
@@ -34,7 +34,7 @@ export default function Login() {
               <input
                 type="password"
                 id="password"
-                className="bg-[#9E9D9D] p-2 rounded w-full outline-none"
+                className="bg-[#9E9D9D] p-2 rounded w-full outline-none  text-white"
               />
               <FaEyeSlash className="absolute top-1/2 -translate-y-1/2 right-3 z-10 text-[#000000]" />
             </div>
