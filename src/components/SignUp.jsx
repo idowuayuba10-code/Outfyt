@@ -2,6 +2,7 @@ import React from "react";
 import { FaApple, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
+import { Link } from "react-router";
 
 export default function SignUp() {
   return (
@@ -16,7 +17,7 @@ export default function SignUp() {
       </div>
       <form action="" className="mb-10">
         <div className="mb-6">
-          <div>
+          <div className="animate-slidein">
             <label htmlFor="name" className="text-white mb-1.5 block">
               Name
             </label>
@@ -26,7 +27,7 @@ export default function SignUp() {
               className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5"
             />
           </div>
-          <div>
+          <div className="animate-slidein">
             <label htmlFor="email" className="text-white mb-1.5 block">
               Email
             </label>
@@ -36,7 +37,7 @@ export default function SignUp() {
               className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5"
             />
           </div>
-          <div>
+          <div className="animate-slidein">
             <label htmlFor="password" className="text-white mb-1.5 block">
               Password
             </label>
@@ -61,7 +62,7 @@ export default function SignUp() {
             </label>
           </div>
         </div>
-        <button className="bg-[#E48045] text-white py-2 px-4 rounded-2xl w-full  hover:bg-[#E64A19]">
+        <button className="bg-[#E48045] text-white py-2 px-4 rounded-2xl w-full  hover:bg-[#E64A19] animate-scaleout origin-center">
           Sign Up
         </button>
       </form>
@@ -79,11 +80,14 @@ export default function SignUp() {
           <FcGoogle size={20} />
         </div>
         <div className="border w-10 h-10 border-white rounded-full flex justify-center items-center">
-          <FaFacebookF size={20} color="#1877F2"/>
+          <FaFacebookF size={20} color="#1877F2" />
         </div>
       </div>
       <p className="text-white text-center mt-5">
-        Already have an account? <u className="cursor-pointer text-[#E48045]">Sign In</u>
+        Already have an account?{" "}
+        <Link to="/login" className="cursor-pointer text-[#E48045] underline">
+          Sign In
+        </Link>
       </p>
     </div>
   );

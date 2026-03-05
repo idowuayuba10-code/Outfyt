@@ -1,6 +1,7 @@
 import React from "react";
 import { FaApple, FaEyeSlash, FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router";
 
 export default function Login() {
   return (
@@ -15,17 +16,17 @@ export default function Login() {
       </div>
       <form action="" className="mb-10">
         <div className="mb-6">
-          <div>
+          <div className="animate-slidein">
             <label htmlFor="email" className="text-white mb-1.5 block">
               Email
             </label>
             <input
               type="email"
               id="email"
-              className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5"
+              className="bg-[#9E9D9D] p-2 rounded w-full outline-none mb-2.5 "
             />
           </div>
-          <div className="mb-5">
+          <div className="mb-5 animate-slidein">
             <label htmlFor="password" className="text-white mb-1.5 block">
               Password
             </label>
@@ -38,13 +39,13 @@ export default function Login() {
               <FaEyeSlash className="absolute top-1/2 -translate-y-1/2 right-3 z-10 text-[#000000]" />
             </div>
           </div>
-          <div className="flex items-center mt-4 justify-end">
+          <div className="flex items-center mt-4 justify-end ">
             <a href="#" className="text-white">
               Forgot password?
             </a>
           </div>
         </div>
-        <button className="bg-[#E48045] text-white py-2 px-4 rounded-2xl w-full  hover:bg-[#E64A19] mb-10">
+        <button className="bg-[#E48045] text-white py-2 px-4 rounded-2xl w-full  hover:bg-[#E64A19] mb-10 animate-scaleout origin-center ">
           Sign In
         </button>
       </form>
@@ -67,7 +68,9 @@ export default function Login() {
       </div>
       <p className="text-white text-center mt-5">
         Don't have an account?{" "}
-        <u className="cursor-pointer text-[#E48045]">Sign Up</u>
+        <Link to="/signup" className="cursor-pointer text-[#E48045] underline">
+          Sign Up
+        </Link>
       </p>
     </div>
   );
